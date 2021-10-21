@@ -1,7 +1,7 @@
 /*
 Author: Alexander Recinos
 File Name: styles.css
-Date: 09/24/2021
+Date: 10/21/2021
 */
 
 /* CSS Reset */
@@ -127,7 +127,7 @@ main p {
   border-radius: 8px;
 }
 
-#contact {
+#contact, #rental h2, #form h2 {
     text-align: center;
 }
 
@@ -156,6 +156,58 @@ main p {
     border: 5px solid #373684;
     width: 95%;
     height: 50%;
+}
+
+/* Style rules for table elements */
+table {
+    border: 1px solid #373684;
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 100%;
+}
+ 
+caption {
+    font-size: 1.5em;
+    font-weight: bold; 
+    padding: 1%;
+}
+ 
+th, td {
+    border: 1px solid #373684;
+    padding: 2%; 
+}
+ 
+th {
+    background-color: #373684;
+    color: #fff;
+    font-size: 1.15em;
+}
+ 
+tr:nth-child(odd) {
+    background-color: #b7b7e1;  
+}
+
+/* Style rules for form elements */
+fieldset, input {
+  margin-bottom: 2%;
+}
+
+fieldset legend {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+label {
+  display: block;
+  padding-top: 3%;
+}
+
+form #submit {
+  margin: 0 auto;
+  display: block;
+  padding: 3%;
+  background-color: #b7b7e1;
+  font-size: 1em;
 }
 
 /* Style rules for footer content */
@@ -212,11 +264,19 @@ footer a {
   nav li:last-child {
     border-right: none;
   }
+  
   /* Tablet Viewport: Style rule for map */
   .map {
     width: 500px;
     height: 450px;
   }
+
+  /* Tablet Viewport: Style rule for form element */
+  form {
+    width: 70%;
+    margin: 0 auto;
+  }
+
 }
 
 /* Media Query for Desktop Viewport */

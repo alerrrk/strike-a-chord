@@ -6,43 +6,42 @@ Date: 10/21/2021
 
 /* CSS Reset */
 body, header, nav, main, footer, img, h1, ul, section, aside, figure, figcaption {
-    margin: 0;
-    padding: 0;
-    border: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 /* Style rule for images */
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
 /* Style rule for box sizing applies to all elements */  
 * {  
-    box-sizing: border-box; 
+  box-sizing: border-box; 
 }   
 
 /* Style rules for mobile viewport */ 
-  aside {
+aside {
     text-align: center;
     font-size: 1.5em;
-    font-weight: bold;
-    color: #373684;
+    font-weight: bold;      color: #373684;
     text-shadow: 3px 3px 10px #8280cb;
-  }
+}
 
-  figure {
+figure {
     position: relative;
     max-width: 275px;
     margin: 2% auto;
     border: 8px solid #373684;
-  }
+}
 
-  figcaption {
+figcaption {
     position: absolute;
     bottom: 0;
     background: rgba(55, 54, 132, 0.7);
-    color: #fff;
+    color: #fff;      
     width: 100%;
     padding: 5% 0;
     text-align: center;
@@ -52,7 +51,7 @@ img {
   }
 
 /* Hide tab-desk class */
-.tab-desk {
+.tab-desk, #menu-links {
     display: none;
 }
 
@@ -65,30 +64,36 @@ header {
  
 header h1 {
     font-family: 'DM Serif Display', serif;
+    font-size: 1.5em;
+    padding: 4%;
+    margin-right: 15%;
 }
 
 /* Style rules for navigation area */
 nav {
     background-color: #373684;
 }
- 
-nav ul {
-    list-style-type: none;
-    text-align: center;
-}
- 
-nav li {
-    display: block;
-    font-size: 2em;
-    border-top: 1px solid #e5e9fc;
-}
- 
-nav li a {
-    display: block;
+
+.mobile-nav a {
     color: #fff;
     text-align: center;
-    padding: 0.5em 1em;
+    font-size: 2em;
     text-decoration: none;
+    padding: 3%;
+    display: block;
+}
+ 
+.mobile-nav a.menu-icon {
+    display: block;
+    position: absolute;
+    right: 0; 
+    top: 0;  
+}
+ 
+.menu-icon div {
+    height: 50px;
+    width: 50px;
+    background-color: #373684;
 }
 
 /* Style rules for main content */
@@ -110,7 +115,7 @@ main p {
 }
 
 #piano, #guitar, #violin {
-     margin: 0 2%;
+    margin: 0 2%;
 }
  
 #info {
@@ -120,11 +125,11 @@ main p {
 }
 
 #info ul {
-  margin-left: 10%;
+    margin-left: 10%;
 }
 
 .round {
-  border-radius: 8px;
+    border-radius: 8px;
 }
 
 #contact, #rental h2, #form h2 {
@@ -133,17 +138,17 @@ main p {
 
 .tel-link {
     background-color: #373684;
-        padding: 2%;
-        margin: 0 auto;
-        width: 80%;
-        text-align: center;
-        border-radius: 5px;
+    padding: 2%;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
 } 
 .tel-link a {
     color: #fff;
-        text-decoration: none;
-        font-size: 1.5em;
-        display: block;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: block;
 }
  
 #contact .email-link {
@@ -189,25 +194,25 @@ tr:nth-child(odd) {
 
 /* Style rules for form elements */
 fieldset, input {
-  margin-bottom: 2%;
+    margin-bottom: 2%;
 }
 
 fieldset legend {
-  font-weight: bold;
-  font-size: 1.25em;
+    font-weight: bold;
+    font-size: 1.25em;
 }
 
 label {
-  display: block;
-  padding-top: 3%;
+    display: block;
+    padding-top: 3%;
 }
 
 form #submit {
-  margin: 0 auto;
-  display: block;
-  padding: 3%;
-  background-color: #b7b7e1;
-  font-size: 1em;
+    margin: 0 auto;
+    display: block;
+    padding: 3%;
+    background-color: #b7b7e1;
+    font-size: 1em;
 }
 
 /* Style rules for footer content */
@@ -228,7 +233,7 @@ footer a {
   .tab-desk {
       display: block;
   } 
-  .mobile {
+  .mobile, .mobile-nav {
       display: none;  
   } 
   
@@ -238,43 +243,53 @@ footer a {
   } 
 
   nav li a {
-    padding-top: 0.25em;
-    padding-bottom: 0.25em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+      padding-top: 0.25em;
+      padding-bottom: 0.25em;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      display: block;
+      color: #fff;
+      text-align: center;
+      padding: 0.5em 1em;
+      text-decoration: none;
   }
 
   .grid {
-    display: grid;
-    grid-gap: 20px;
+      display: grid;
+      grid-gap: 20px;
   }
 
   aside {
-    grid-column: 1 /span 2;
+      grid-column: 1 /span 2;
   }
 
   /* Tablet Viewport: Style rules for nav area */
+  nav ul {
+      list-style-type: none;
+      text-align: center;
+  }
+
   nav li {
-    border-top: none;
-    display: inline-block;
-    font-size: 1.5em;
-    border-right: 1px solid #e5e9fc;
+      border-top: none;
+      display: inline-block;
+      font-size: 1.5em;
+      border-right: 1px solid #e5e9fc;
   }
 
   nav li:last-child {
-    border-right: none;
+      border-right: none;
   }
   
   /* Tablet Viewport: Style rule for map */
   .map {
-    width: 500px;
-    height: 450px;
+      width: 500px;
+      height: 450px;
   }
 
   /* Tablet Viewport: Style rule for form element */
   form {
-    width: 70%;
-    margin: 0 auto;
+      width: 70%;
+      margin: 0 auto;
   }
 
 }
@@ -284,73 +299,74 @@ footer a {
   
   /* Desktop Viewport: Style rule for header */
   header {
-    padding: 2%;
+      padding: 2%;
   }
 
 /* Desktop Viewport: Style rules for nav area */
   nav li a {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
   } 
 
   nav li a:hover {
-    color: #373684;
-    background-color: #e5e9fc;
+      color: #373684;
+      background-color: #e5e9fc;
+      transform: scale(1.2);
   }
   
   /* Desktop Viewport: Style Rules for main content */
   #info ul {
-    margin-left: 5%;
+      margin-left: 5%;
   }
   
   main h3 {
-    font-size: 1.5em;
+      font-size: 1.5em;
   }
 
   #piano, #guitar, #violin {
-    width: 29%;
-    float: left;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 2%;
-    margin-right: 2%;
+      width: 29%;
+      float: left;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 2%;
+      margin-right: 2%;
   }
 
   .grid {
-    grid-template-columns: 4fr;
+      grid-template-columns: 4fr;
   }
 
   figcaption {
-    font-size: 1em;
+      font-size: 1em;
   }
 
   aside {
-    grid-column: 1 /span 4;
+      grid-column: 1 /span 4;
   }
 
   /* Desktop Viewport: Style rules for table elements */
   table {
-    width: 70%;
+      width: 70%;
   }
 
   /* Desktop Viewport: Style rules for form elements */
   form-grid {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 20px;
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 20px;
   }
 
   .btn {
-    grid-column: 1 / span 2;
+      grid-column: 1 / span 2;
   }
 }
 
 /* Media Query for Print */
 @media print {
   body {
-    background-color: #fff;
-    color: #000;
+      background-color: #fff;
+      color: #000;
   }
 }

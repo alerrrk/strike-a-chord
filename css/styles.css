@@ -227,6 +227,10 @@ footer a {
     text-decoration: none;
 }
 
+.social img {
+    display: inline-block;
+        padding: 4%; }
+
 /* Media Query for Tablet Viewport */
 @media screen and (min-width: 550px), print { 
   /* Tablet Viewport: Show tab-desk class, hide mobile class */  
@@ -290,6 +294,16 @@ footer a {
   form {
       width: 70%;
       margin: 0 auto;
+  }
+
+  /* Tablet Viewport: Style rules for footer area */ 
+  .copyright {
+      float: left;  width: 65%; 
+  }
+  
+  .social {
+      float: right;
+          width: 25%; 
   }
 
 }
